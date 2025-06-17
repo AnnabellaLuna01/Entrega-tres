@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #9eb07c;
+  overflow-x: hidden; 
+}
+
+/* NAVEGADOR */
+.navegador {
+  background-color: #fbe5c6;
+  border: 5px solid black;
+  padding: 1% 2%;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.enlaces .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 8px 12px;
+}
+
+.enlaces .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* TÍTULO */
+.titulo {
+  background-color: #7fffd4;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* INFORMACIÓN PRINCIPAL */
+.informacion-principal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background-color: #fbe5c6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-central img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/*  FORMULARIO */
+.formulario {
+  background-color: #fbe5c7;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid #999;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+legend {
+  grid-column: span 6;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  grid-column: span 1;
+  text-align: right;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  grid-column: span 2;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  width: 100%;
+}
+
+#Opinion {
+  grid-column: span 5;
+  width: 100%;
+}
+
+input[type="submit"] {
+  grid-column: span 1;
+  justify-self: end;
+  padding: 8px 16px;
+  background-color: #669966;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*  CLAVES */
+.seccion-claves {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #fbe5c6;
+  padding: 20px;
+}
+
+.seccion-claves .texto {
+  flex: 1 1 60%;
+}
+
+.seccion-claves .texto h3 {
+  font-size: 24px;
+}
+
+.seccion-claves .texto p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.seccion-claves .video {
+  flex: 1 1 35%;
+}
+
+.seccion-claves .video iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+/* Galería de claves */
+.claves-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #fdfbe4;
+}
+
+.clave-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clave-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.clave-item p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* PROMESA Y LEY  */
+.seccion-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fdfde3;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tarjeta p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* FOOTER  */
+.pie-de-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #51598e;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pie-de-pagina a {
+  color: #2b7b96;
+  text-decoration: none;
+}
+
+.pie-de-pagina p {
+  margin: 0;
+}
+
+/* MOBILE  */
+@media screen and (max-width: 768px) {
+  .informacion-principal {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    grid-column: span 1;
+    text-align: left;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  #Opinion {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    justify-self: start;
+  }
+
+  .pie-de-pagina {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seccion-claves {
+    flex-direction: column;
+  }
+
+  .enlaces {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
